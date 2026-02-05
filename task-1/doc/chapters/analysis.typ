@@ -3,7 +3,7 @@
 
 = Description
 
-For this exercise I chose to analyse a dataset of red and white Portuguese "vinho werde" wines @wine_quality_186. This dataset contains 4898 instances with 11 different features which describe properties like color, alcohol concentration and more subtle chemical properties. The target feature which would be beneficial to predict is quality.
+For this exercise I chose to analyse a dataset of red and white Portuguese "vinho werde" wines @wine_quality_186. This dataset contains 4898 instances with 11 different features which describe properties like color, alcohol concentration and more subtle chemical properties. The target variable is wine quality which is expressed as an ordinal score from 0 to 10.
 
 = Numbers 
 
