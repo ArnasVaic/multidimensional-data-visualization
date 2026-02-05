@@ -1,16 +1,26 @@
 #import "config/style.typ": vu_template_style_config
 #import "config/titlepage.typ": vu_template_title_page
 
-#show: vu_template_style_config
+#let lang-lt = false
+
+#show: vu_template_style_config(lang-lt)
 
 #vu_template_title_page(
-  "Multidimensional data visualization first exercise",
+  "First exercise of multidimensional data visualization",
   [ 
-    Analysis of X
+    Analysis of wine quality dataset
   ],
   "Arnas Vaicekauskas",
   "",
-  in-lithuanian: false,
+  in-lithuanian: lang-lt,
 )
 
-// #outline(depth: 3, title: "Outline")
+#outline(depth: 3, title: "Outline")
+
+#pagebreak()
+
+#include "chapters/analysis.typ"
+
+#pagebreak(weak:true)
+
+#bibliography("references.bib")

@@ -1,7 +1,7 @@
 // This template was built to fulfill the formal stylistic requirements of Vilnius University, department of computational and data modelling. Structural requirements are part of the document defined in thesis.typ.
 // The requirements can be found here: https://mif.vu.lt/lt3/dokumentai/dokumentai/KOMP/Reglamentuojantys/Reikalavimai_Magistriniams_Darbams.pdf (last updated 2026-01-16)
 
-#let vu_template_style_config(doc) = [
+#let vu_template_style_config(in-lithuanian) = (doc) => [
   
   // 2. Darbas rašomas viena skiltimi (vienu stulpeliu).
   #set page(columns: 1)
@@ -44,7 +44,7 @@
   #set bibliography(
     // style: "plain.csl",
     full: false,
-    title: "Literatūros šaltiniai"
+    title: if in-lithuanian [ Literatūros šaltiniai ] else [ Literature sources ]
   )
 
   // 10. Iliustracijos, lentelės ir pseudokodas privalo tenkinti reikalavimus, nurodytus [2] (žr. „Rašto darbai”
@@ -63,7 +63,11 @@
   // Non-numbered headings are configured explicitly throughout the document
 
   // TODO: Priskirti konfigūracija kažkuriam tai reikalavimui
-  #set ref(supplement: none)
+  #set ref(supplement: auto)
+  
+  #show figure.where(
+    kind: table
+  ): set figure.caption(position: top)
 
   #doc
 ]
