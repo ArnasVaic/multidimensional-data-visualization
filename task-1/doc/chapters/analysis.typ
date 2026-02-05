@@ -14,6 +14,7 @@ This dataset contains 2 classes of wines (red and white) which total 4898 instan
 - No missing values
 - Dataset is not balanced (many more instances of medium quality wine than excelent or poor ones)
 - Authors warn that it is possible that not all input features are relevant for predicting the wine quality
+- Data normalization should be used as ranges of continous variables are very different.
 
 = Features (attributes & parameters)
 
@@ -39,3 +40,7 @@ table(
 ]
 
 As shown in @dataset-features Bulk of the dataset features are continous and focused on the chemical properties of wines. The only categorical feature is the color and the target feature is wine quality.
+
+= Hypothesis and visualization
+
+For this dataset we would try to visualize all features from @dataset-features which have a role "Feature" and try to find patterns or to see how different parameters affect quality which as mentioned before is the target parameter.
